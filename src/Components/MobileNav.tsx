@@ -1,46 +1,10 @@
 import React from 'react'
-import NavItems from './NavItems'
 
-const Header = () => {
+const MobileNav = () => {
   return (
-    <div className="relative z-20 bg-transparent">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex justify-between items-center  py-6 md:justify-start md:space-x-10">
-          <div className="flex justify-start lg:w-0 lg:flex-1">
-            <a href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32px" height="32px" viewBox="0 0 32 32">
-                <path d="M2 0h28a2 2 0 0 1 2 2v28a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z" fill="#05A081"></path>
-                <path d="M13 21h3.863v-3.752h1.167a3.124 3.124 0 1 0 0-6.248H13v10zm5.863 2H11V9h7.03a5.124 5.124 0 0 1 .833 10.18V23z" fill="#fff"></path>
-              </svg>
-            </a>
-          </div>
-          <div className="-mr-2 -my-2 md:hidden">
-            <button type="button" className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
-              <span className="sr-only">Open menu</span>
-              {/* <!-- Heroicon name: outline/menu --> */}
-              <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div>
-
-         <NavItems/>
-        </div>
-      </div>
-
-      {/* <!--
-    Mobile menu, show/hide based on mobile menu state.
-
-    Entering: "duration-200 ease-out"
-      From: "opacity-0 scale-95"
-      To: "opacity-100 scale-100"
-    Leaving: "duration-100 ease-in"
-      From: "opacity-100 scale-100"
-      To: "opacity-0 scale-95"
-  --> */}
-      <div className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+<div className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
         <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
-          <div className="pt-5 hidden h-screen pb-6 px-5">
+          <div className="pt-5 pb-6 px-5">
             <div className="flex items-center justify-between">
               <div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="32px" height="32px" viewBox="0 0 32 32">
@@ -166,8 +130,7 @@ const Header = () => {
 
         </div>
       </div>
-    </div>
   )
 }
 
-export default Header
+export default MobileNav

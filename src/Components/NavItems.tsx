@@ -1,15 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const NavItems = () => {
+    const [navOpen, setnavOpen] = useState(false)
+    const openClass = "absolute   bg-[#e8e8e8] min-w-[175px] w-60 -left-[215px] max-w-xs  top-12  text-black"
+    const closeClass = "absolute hidden   bg-[#e8e8e8] min-w-[175px] w-60 -left-[215px] max-w-xs  top-12  text-black"
     return (
         <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
             <a href="#" className="whitespace-nowrap mr-2 text-xl font-medium text-white hover:text-gray-900"> Explore </a>
             <a href="#" className="whitespace-nowrap mr-2 text-xl font-medium text-white hover:text-gray-900"> Licence </a>
             <a href="#" className="whitespace-nowrap mr-2 text-xl font-medium text-white hover:text-gray-900"> Upload </a>
             <a href="#" className="whitespace-nowrap mr-2 text-xl font-bold text-white hover:text-gray-900">
-                <div className='relative'>
+                <div onClick={()=> setnavOpen(!navOpen)} className='relative'>
                     <div>...</div>
-                    <div className="absolute  bg-[#e8e8e8] min-w-[175px] w-60 -left-[215px] max-w-xs  top-12  text-black">
+                    <div className={navOpen? openClass: closeClass}>
                         <div className="text-sm">
                             <div className="absolute -z-10 bg-white rotate-45 shadow-sm rounded-[2px] w-6 h-6 text-[#1a1a1a] text-sm" style={{ left: " auto", right: "5px", top: -"4.5px" }}></div>
                             <ul className="py-2 px-2 font-bold"><li className="when-not-signed-in">
