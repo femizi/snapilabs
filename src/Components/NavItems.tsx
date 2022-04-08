@@ -6,10 +6,10 @@ const NavItems = () => {
     const closeClass = "absolute hidden   bg-[#e8e8e8] min-w-[175px] w-60 -left-[215px] max-w-xs  top-12  text-black"
     return (
         <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-            <a href="#" className="whitespace-nowrap mr-2 text-xl font-medium text-white hover:text-gray-900"> Explore </a>
-            <a href="#" className="whitespace-nowrap mr-2 text-xl font-medium text-white hover:text-gray-900"> Licence </a>
-            <a href="#" className="whitespace-nowrap mr-2 text-xl font-medium text-white hover:text-gray-900"> Upload </a>
-            <a href="#" className="whitespace-nowrap mr-2 text-xl font-bold text-white hover:text-gray-900">
+            <a href="#" className="whitespace-nowrap mr-4 text-xl font-medium text-white hover:text-gray-900"> Explore </a>
+            <a href="#" className="whitespace-nowrap mr-4 text-xl font-medium text-white hover:text-gray-900"> Licence </a>
+            <a href="#" className="whitespace-nowrap mr-4 text-xl font-medium text-white hover:text-gray-900"> Upload </a>
+            <a href="#" className="whitespace-nowrap mr-4 text-xl font-bold text-white hover:text-gray-900">
                 <div onClick={() => setnavOpen(!navOpen)} className='relative'>
                     <div>...</div>
                     <div className={navOpen ? openClass : closeClass}>

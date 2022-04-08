@@ -5,7 +5,7 @@ const ImageGallery = ({allQuery}) => {
 
   return (
     <div className='px-4 md:px-6  '>
-        <ul className='grid grid-col-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
+        <ul className='grid grid-col-2 md:grid-cols-3 gap-4'>
            {/* checking all query load and error then map */}
            {
           allQuery.isLoading ? <div className='text-center p-2'>Loading...</div>
